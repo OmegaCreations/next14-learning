@@ -1,4 +1,5 @@
-import Link from "next/link";
+import "./links.css";
+import NavLink from "./navLink/navLink";
 
 // Links
 const Links: React.FC = () => {
@@ -15,14 +16,18 @@ const Links: React.FC = () => {
       title: "Contact",
       path: "/contact",
     },
+    {
+      title: "Blog",
+      path: "/blog",
+    },
   ];
 
+  const session = true;
+
   return (
-    <div>
+    <div className="links">
       {links.map((link) => (
-        <Link href={link.path} key={link.title}>
-          {link.title}
-        </Link>
+        <NavLink item={link} key={link.title} />
       ))}
     </div>
   );

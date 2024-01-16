@@ -1,10 +1,11 @@
 import Links from "./links/Links";
+import "./navbar.css";
 
 // Navbar
 const Navbar: React.FC = () => {
   return (
-    <div>
-      <div>Logo</div>
+    <div className="container navbar">
+      <div className="logo">Logo</div>
       <div>
         <Links />
       </div>
